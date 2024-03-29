@@ -112,7 +112,7 @@ public class CalculatorManager : MonoBehaviour
 
     public void PulsarMemoriaRecuperar()
     {
-        entradaActual = resultadoMemoria.ToString();
+        entradaActual = resultadoMemoria.ToString(CultureInfo.InvariantCulture);
         ActualizarTextoDisplay();
     }
 
