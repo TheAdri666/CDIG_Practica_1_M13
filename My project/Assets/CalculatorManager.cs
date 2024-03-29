@@ -34,7 +34,7 @@ public class CalculatorManager : MonoBehaviour
         }
         else
             entradaActual += digito;
-        
+
         ActualizarTextoDisplay();
     }
 
@@ -46,7 +46,7 @@ public class CalculatorManager : MonoBehaviour
         //Si en vez de pulsar igual (=), sigues haciendo operaciones, la calculadora te calculará el resultado de esa operación primera
         if (entradaActual.Any(operadores.Contains))
             Calcular();
-        
+
         entradaActual += operacion;
         ActualizarTextoDisplay();
     }
@@ -88,7 +88,7 @@ public class CalculatorManager : MonoBehaviour
             {
                 if (entradaActual[entradaActual.Length - 1] == '.')
                     puntoEnOperador = false;
-                
+
                 entradaActual = entradaActual.Remove(entradaActual.Length - 1);
             }
             else
@@ -122,7 +122,7 @@ public class CalculatorManager : MonoBehaviour
         entradaActual = resultadoMemoria.ToString(CultureInfo.InvariantCulture);
         if (entradaActual.Contains('.'))
             puntoEnOperador = true;
-        
+
         ActualizarTextoDisplay();
     }
 
@@ -198,6 +198,7 @@ public class CalculatorManager : MonoBehaviour
         return resultadoParseado;
     }
 
+    // Color of the MR button will be white when the memory is empty and green otherwise.
     void Start()
     {
         if (memRecoverBtn != null)
