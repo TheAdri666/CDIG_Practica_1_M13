@@ -167,7 +167,7 @@ public class CalculatorManager : MonoBehaviour
         }
         else
         {
-            resultadoParseado = resultado.ToString(CultureInfo.InvariantCulture);
+            resultadoParseado = resultado.ToString("0.#####", CultureInfo.InvariantCulture);
         }
         return resultadoParseado;
     }
