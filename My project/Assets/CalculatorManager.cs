@@ -12,7 +12,7 @@ public class CalculatorManager : MonoBehaviour
     public Text textoDisplay;
 
     private string entradaActual = "0";
-    private double resultadoMemoria = 0;
+    private string resultadoMemoria = "0";
     private bool igualPulsado = false;
     private bool puntoEnOperador = false;
     private char[] operadores = { '+', '-', '*', '/' };
@@ -25,6 +25,7 @@ public class CalculatorManager : MonoBehaviour
         {
             entradaActual = digito;
             igualPulsado = false;
+            puntoEnOperador = false;
         }
         else
         {
@@ -60,7 +61,6 @@ public class CalculatorManager : MonoBehaviour
     {
         Calcular();
         igualPulsado = true;
-        puntoEnOperador = false;
     }
 
     public void PulsarBorrar()
@@ -97,17 +97,19 @@ public class CalculatorManager : MonoBehaviour
 
     public void PulsarMemoriaSuma()
     {
-        resultadoMemoria += Convert.ToDouble(entradaActual, CultureInfo.InvariantCulture);
+        double resultado = Convert.ToDouble(resultadoMemoria, CultureInfo.InvariantCulture) + Convert.ToDouble(ParsearResultado(entradaActual), CultureInfo.InvariantCulture);
+        resultadoMemoria = ParsearResultado(resultado.ToString());
     }
 
     public void PulsarMemoriaResta()
     {
-        resultadoMemoria -= Convert.ToDouble(entradaActual, CultureInfo.InvariantCulture);
+        double resultado = Convert.ToDouble(resultadoMemoria, CultureInfo.InvariantCulture) - Convert.ToDouble(ParsearResultado(entradaActual), CultureInfo.InvariantCulture);
+        resultadoMemoria = ParsearResultado(resultado.ToString());
     }
 
     public void PulsarMemoriaLimpiar()
     {
-        resultadoMemoria = 0;
+        resultadoMemoria = "0";
     }
 
     public void PulsarMemoriaRecuperar()
@@ -126,18 +128,10 @@ public class CalculatorManager : MonoBehaviour
         {
             entradaActual = entradaActual.Remove(entradaActual.Length - 1);
         }
-
         try
         {
-            double resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaActual, ""));
-            if (resultado.ToString("G5", CultureInfo.InvariantCulture).Contains("E+"))
-            {
-                entradaActual = resultado.ToString("G5", CultureInfo.InvariantCulture);
-            }
-            else
-            {
-                entradaActual = resultado.ToString(CultureInfo.InvariantCulture);
-            }
+            string resultado = ParsearResultado(entradaActual);
+            entradaActual = resultado;
             ActualizarTextoDisplay();
         }
         catch (Exception e)
@@ -161,5 +155,20 @@ public class CalculatorManager : MonoBehaviour
     private bool UltimoCaracterEsOperador()
     {
         return operadores.Contains(entradaActual[entradaActual.Length - 1]);
+    }
+
+    private string ParsearResultado(string entradaAParsear)
+    {
+        string resultadoParseado;
+        double resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaAParsear, ""));
+        if (resultado.ToString("G5", CultureInfo.InvariantCulture).Contains("E+"))
+        {
+            resultadoParseado = resultado.ToString("G5", CultureInfo.InvariantCulture);
+        }
+        else
+        {
+            resultadoParseado = resultado.ToString(CultureInfo.InvariantCulture);
+        }
+        return resultadoParseado;
     }
 }
