@@ -104,12 +104,14 @@ public class CalculatorManager : MonoBehaviour
     {
         double resultado = Convert.ToDouble(resultadoMemoria, CultureInfo.InvariantCulture) + Convert.ToDouble(ParsearResultado(entradaActual), CultureInfo.InvariantCulture);
         resultadoMemoria = ParsearResultado(resultado.ToString());
+        PulsarMemoriaRecuperar();
     }
     //Aquí se le resta a lo que haya en memoría, la expresión actual que haya introducido el usuario, y se guarda en memoría
     public void PulsarMemoriaResta()
     {
         double resultado = Convert.ToDouble(resultadoMemoria, CultureInfo.InvariantCulture) - Convert.ToDouble(ParsearResultado(entradaActual), CultureInfo.InvariantCulture);
         resultadoMemoria = ParsearResultado(resultado.ToString());
+        PulsarMemoriaRecuperar();
     }
     //El valor que habrá en memoria se resetea al inicial (0)
     public void PulsarMemoriaLimpiar()
