@@ -113,6 +113,10 @@ public class CalculatorManager : MonoBehaviour
     public void PulsarMemoriaRecuperar()
     {
         entradaActual = resultadoMemoria.ToString(CultureInfo.InvariantCulture);
+        if (entradaActual.Contains('.'))
+        {
+            puntoEnOperador = true;
+        }
         ActualizarTextoDisplay();
     }
 
