@@ -125,7 +125,7 @@ public class CalculatorManager : MonoBehaviour
         try
         {
             var resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaActual, ""));
-            entradaActual = resultado.ToString("G5");
+            entradaActual = resultado.ToString("G5", CultureInfo.InvariantCulture);
             ActualizarTextoDisplay();
         }
         catch (Exception e)
