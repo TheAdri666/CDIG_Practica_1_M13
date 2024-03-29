@@ -97,12 +97,12 @@ public class CalculatorManager : MonoBehaviour
 
     public void PulsarMemoriaSuma()
     {
-        resultadoMemoria += Convert.ToDouble(entradaActual);
+        resultadoMemoria += Convert.ToDouble(entradaActual, CultureInfo.InvariantCulture);
     }
 
     public void PulsarMemoriaResta()
     {
-        resultadoMemoria -= Convert.ToDouble(entradaActual);
+        resultadoMemoria -= Convert.ToDouble(entradaActual, CultureInfo.InvariantCulture);
     }
 
     public void PulsarMemoriaLimpiar()
@@ -126,7 +126,7 @@ public class CalculatorManager : MonoBehaviour
         try
         {
             var resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaActual, ""));
-            entradaActual = resultado.ToString("G5", CultureInfo.InvariantCulture);
+            entradaActual = resultado.ToString("G8", CultureInfo.InvariantCulture);
             ActualizarTextoDisplay();
         }
         catch (Exception e)
