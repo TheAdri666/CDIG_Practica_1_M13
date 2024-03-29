@@ -17,6 +17,8 @@ public class CalculatorManager : MonoBehaviour
     private bool puntoEnOperador = false;
     private char[] operadores = { '+', '-', '*', '/' };
 
+    private const int MAX_CARACTERES_MOSTRADOS = 10;
+
     public void PulsarNumero(string digito)
     {
         if (entradaActual == "0" || igualPulsado)
@@ -28,7 +30,7 @@ public class CalculatorManager : MonoBehaviour
         {
             entradaActual += digito;
         }
-        textoDisplay.text = entradaActual;
+        ActualizarTextoDisplay();
     }
 
     public void PulsarOperacion(string operacion)
@@ -40,7 +42,7 @@ public class CalculatorManager : MonoBehaviour
             Calcular();
         }
         entradaActual += operacion;
-        textoDisplay.text = entradaActual;
+        ActualizarTextoDisplay();
     }
 
     public void PulsarDecimal()
@@ -51,7 +53,7 @@ public class CalculatorManager : MonoBehaviour
         {
             puntoEnOperador = true;
             entradaActual += ".";
-            textoDisplay.text = entradaActual;
+            ActualizarTextoDisplay();
         }
     }
 
@@ -67,7 +69,7 @@ public class CalculatorManager : MonoBehaviour
         igualPulsado = false;
         puntoEnOperador = false;
         entradaActual = "0";
-        textoDisplay.text = entradaActual;
+        ActualizarTextoDisplay();
     }
 
     public void PulsarRetroceso()
@@ -90,7 +92,7 @@ public class CalculatorManager : MonoBehaviour
             {
                 entradaActual = "0";
             }
-            textoDisplay.text = entradaActual;
+            ActualizarTextoDisplay();
         }
     }
 
@@ -112,7 +114,7 @@ public class CalculatorManager : MonoBehaviour
     public void PulsarMemoriaRecuperar()
     {
         entradaActual = resultadoMemoria.ToString();
-        textoDisplay.text = entradaActual;
+        ActualizarTextoDisplay();
     }
 
     private void Calcular()
@@ -126,7 +128,7 @@ public class CalculatorManager : MonoBehaviour
         {
             var resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaActual, ""));
             entradaActual = resultado.ToString("G5");
-            textoDisplay.text = entradaActual;
+            ActualizarTextoDisplay();
         }
         catch (Exception e)
         {
@@ -134,4 +136,15 @@ public class CalculatorManager : MonoBehaviour
         }
     }
 
+    private void ActualizarTextoDisplay()
+    {
+        if (entradaActual.Length > MAX_CARACTERES_MOSTRADOS)
+        {
+            textoDisplay.text = entradaActual.Substring(entradaActual.Length - MAX_CARACTERES_MOSTRADOS);
+        }
+        else
+        {
+            textoDisplay.text = entradaActual;
+        }
+    }
 }
