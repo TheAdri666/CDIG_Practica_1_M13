@@ -442,7 +442,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 175163991}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 7
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &175163991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,7 +575,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 209938612}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarMemoriaSuma
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &209938612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,7 +862,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 335913188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarOperacion
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: /
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &335913188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,7 +995,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 348214569}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 4
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &348214569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,6 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63067e0268db3fb4f80029e4c6303cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textoDisplay: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1256,16 +1305,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2101796386}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 0
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &692352477
@@ -1728,7 +1777,7 @@ RectTransform:
   m_GameObject: {fileID: 967629925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.38043553, y: 0.38043553, z: 0.38043553}
   m_Children:
   - {fileID: 1317307855}
   - {fileID: 227321503}
@@ -1738,7 +1787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.609497, y: 175.76941}
+  m_AnchoredPosition: {x: -0, y: -0}
   m_SizeDelta: {x: 678.219, y: 1103.539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967629927
@@ -2019,7 +2068,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1271180843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarOperacion
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: +
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1271180843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2276,7 +2337,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1323649882}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1323649882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2397,7 +2470,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1332562594}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarDecimal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1332562594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2518,7 +2603,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1340708443}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarBorrar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1340708443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2639,7 +2736,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1401615881}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarOperacion
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '*'
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1401615881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2839,7 +2948,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1447716474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 9
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1447716474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3342,7 +3463,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1612784509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1612784509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3542,7 +3675,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1633573356}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarOperacion
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '-'
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1633573356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3663,7 +3808,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1693723988}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1693723988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3784,7 +3941,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1698571549}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarIgual
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1698571549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3905,7 +4074,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1729016198}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarMemoriaLimpiar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1729016198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4263,7 +4444,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1842676787}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1842676787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4384,7 +4577,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1851021317}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarMemoriaResta
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1851021317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4505,7 +4710,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1909354503}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 8
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1909354503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4626,7 +4843,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1928834731}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarMemoriaRecuperar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1928834731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4826,7 +5055,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2042406344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarRetroceso
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2042406344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4947,7 +5188,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2047949918}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2101796391}
+        m_TargetAssemblyTypeName: CalculatorManager, Assembly-CSharp
+        m_MethodName: PulsarNumero
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 6
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2047949918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5099,3 +5352,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63067e0268db3fb4f80029e4c6303cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textoDisplay: {fileID: 1289304519}
