@@ -13,7 +13,6 @@ public class CalculatorManager : MonoBehaviour
     private string entradaActual = "0";
     private double resultadoMemoria = 0;
     private bool igualPulsado = false;
-
     private bool puntoEnOperador = false;
     private char[] operadores = { '+', '-', '*', '/' };
 
@@ -48,7 +47,6 @@ public class CalculatorManager : MonoBehaviour
     public void PulsarDecimal()
     {
         igualPulsado = false;
-        // if (!entradaActual.Contains(".") || entradaActual.Contains(".") && !entradaActual.Substring(entradaActual.IndexOf(".")).Any(c => operadores.Contains(c)))
         if (!puntoEnOperador)
         {
             puntoEnOperador = true;
@@ -74,7 +72,7 @@ public class CalculatorManager : MonoBehaviour
 
     public void PulsarRetroceso()
     {
-        if (igualPulsado)
+        if (igualPulsado || UltimoCaracterEsOperador())
         {
             PulsarBorrar();
         }
@@ -119,7 +117,7 @@ public class CalculatorManager : MonoBehaviour
 
     private void Calcular()
     {
-        if (operadores.Contains(entradaActual[entradaActual.Length - 1]))
+        if (UltimoCaracterEsOperador())
         {
             entradaActual = entradaActual.Remove(entradaActual.Length - 1);
         }
@@ -146,5 +144,10 @@ public class CalculatorManager : MonoBehaviour
         {
             textoDisplay.text = entradaActual;
         }
+    }
+
+    private bool UltimoCaracterEsOperador()
+    {
+        return operadores.Contains(entradaActual[entradaActual.Length - 1]);
     }
 }
