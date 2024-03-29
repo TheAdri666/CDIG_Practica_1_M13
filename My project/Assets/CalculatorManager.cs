@@ -129,8 +129,15 @@ public class CalculatorManager : MonoBehaviour
 
         try
         {
-            var resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaActual, ""));
-            entradaActual = resultado.ToString("G8", CultureInfo.InvariantCulture);
+            double resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaActual, ""));
+            if (resultado.ToString("G5", CultureInfo.InvariantCulture).Contains("E+"))
+            {
+                entradaActual = resultado.ToString("G5", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                entradaActual = resultado.ToString(CultureInfo.InvariantCulture);
+            }
             ActualizarTextoDisplay();
         }
         catch (Exception e)
