@@ -10,7 +10,7 @@ public class CalculatorManager : MonoBehaviour
 {
 
     public Text textoDisplay;
-
+    public Button memRecoverBtn;
     private string entradaActual = "0";
     private string resultadoMemoria = "0";
     private bool igualPulsado = false;
@@ -170,5 +170,28 @@ public class CalculatorManager : MonoBehaviour
             resultadoParseado = resultado.ToString("0.#####", CultureInfo.InvariantCulture);
         }
         return resultadoParseado;
+    }
+
+    void Start()
+    {
+        if (memRecoverBtn != null)
+        {
+            memRecoverBtn.image.color = Color.white;
+        }
+    }
+
+    void Update()
+    {
+        if (memRecoverBtn != null)
+        {
+            if (resultadoMemoria == "0")
+            {
+                memRecoverBtn.image.color = Color.white;
+            }
+            else
+            {
+                memRecoverBtn.image.color = Color.green;
+            }
+        }
     }
 }
