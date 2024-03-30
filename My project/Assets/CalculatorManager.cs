@@ -179,10 +179,10 @@ public class CalculatorManager : MonoBehaviour
         //Futuro resultado final de la operación
         string resultadoParseado;
         /*
-            Se usa una función de System.Data.Datatable llamada Compute, que dado una expresón y unos filtros (ignorados), te calcula un resultado que pasamos
-            a que sea un double
+            Se usa una función de System.Data.Datatable llamada Compute, que dada una expresón y unos filtros (ignorados),
+            calcula un resultado que convierte a un double.
         */
-        double resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaAParsear, ""));
+        double resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaAParsear, ""), CultureInfo.InvariantCulture);
 
         /*
             El resultado solo tendrá 5 dígitos: ("G5", CultureInfo.InvariantCulture)
