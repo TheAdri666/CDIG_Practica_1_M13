@@ -182,6 +182,7 @@ public class CalculatorManager : MonoBehaviour
             Se usa una función de System.Data.Datatable llamada Compute, que dada una expresón y unos filtros (ignorados),
             calcula un resultado que convierte a un double.
         */
+        entradaAParsear = entradaAParsear.Replace(",", ".");
         double resultado = Convert.ToDouble(new System.Data.DataTable().Compute(entradaAParsear, ""), CultureInfo.InvariantCulture);
 
         /*
