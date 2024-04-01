@@ -207,12 +207,12 @@ public class CalculatorManager : MonoBehaviour
     {
         if (memRecoverBtn != null)
         {
-            memRecoverBtn.image.color = Color.white;
+            memRecoverBtn.interactable = false;
         }
 
         if (memClearBtn != null)
         {
-            memClearBtn.image.color = Color.white;
+            memClearBtn.interactable = false;
         }
     }
 
@@ -222,11 +222,11 @@ public class CalculatorManager : MonoBehaviour
         {
             if (resultadoMemoria == "0")
             {
-                memRecoverBtn.image.color = Color.white;
+                memRecoverBtn.interactable = false;
             }
             else
             {
-                memRecoverBtn.image.color = Color.green;
+                memRecoverBtn.interactable = true;
             }
         }
 
@@ -234,11 +234,11 @@ public class CalculatorManager : MonoBehaviour
         {
             if (resultadoMemoria == "0")
             {
-                memClearBtn.image.color = Color.white;
+                memClearBtn.interactable = false;
             }
             else
             {
-                memClearBtn.image.color = Color.green;
+                memClearBtn.interactable = true;
             }
         }
     }
