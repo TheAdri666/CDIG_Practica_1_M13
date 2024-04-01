@@ -1165,8 +1165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoDisplay: {fileID: 0}
-  memRecoverBtn: {fileID: 0}
-  memClearBtn: {fileID: 0}
+  botonMR: {fileID: 0}
+  botonMC: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -5355,5 +5355,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoDisplay: {fileID: 1289304519}
-  memRecoverBtn: {fileID: 1928834730}
-  memClearBtn: {fileID: 1729016197}
+  botonMR: {fileID: 1928834730}
+  botonMC: {fileID: 1729016197}

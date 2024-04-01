@@ -11,8 +11,8 @@ public class CalculatorManager : MonoBehaviour
 
     //Variables con la inicialización debida o indicada en el enunciado
     public Text textoDisplay;
-    public Button memRecoverBtn;
-    public Button memClearBtn;
+    public Button botonMR;
+    public Button botonMC;
     private string entradaActual = "0";
     private string resultadoMemoria = "0";
     private bool igualPulsado = false;
@@ -202,43 +202,43 @@ public class CalculatorManager : MonoBehaviour
         return resultadoParseado;
     }
 
-    // Color of the MR button will be white when the memory is empty and green otherwise.
+    // El color de los botones MC y MR se atenúa cuando la memoria está a 0
     void Start()
     {
-        if (memRecoverBtn != null)
+        if (botonMR != null)
         {
-            memRecoverBtn.interactable = false;
+            botonMR.interactable = false;
         }
 
-        if (memClearBtn != null)
+        if (botonMC != null)
         {
-            memClearBtn.interactable = false;
+            botonMC.interactable = false;
         }
     }
 
     void Update()
     {
-        if (memRecoverBtn != null)
+        if (botonMR != null)
         {
             if (resultadoMemoria == "0")
             {
-                memRecoverBtn.interactable = false;
+                botonMR.interactable = false;
             }
             else
             {
-                memRecoverBtn.interactable = true;
+                botonMR.interactable = true;
             }
         }
 
-        if (memClearBtn != null)
+        if (botonMC != null)
         {
             if (resultadoMemoria == "0")
             {
-                memClearBtn.interactable = false;
+                botonMC.interactable = false;
             }
             else
             {
-                memClearBtn.interactable = true;
+                botonMC.interactable = true;
             }
         }
     }
