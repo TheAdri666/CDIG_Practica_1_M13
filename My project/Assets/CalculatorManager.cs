@@ -12,6 +12,7 @@ public class CalculatorManager : MonoBehaviour
     //Variables con la inicialización debida o indicada en el enunciado
     public Text textoDisplay;
     public Button memRecoverBtn;
+    public Button memClearBtn;
     private string entradaActual = "0";
     private string resultadoMemoria = "0";
     private bool igualPulsado = false;
@@ -208,6 +209,11 @@ public class CalculatorManager : MonoBehaviour
         {
             memRecoverBtn.image.color = Color.white;
         }
+
+        if (memClearBtn != null)
+        {
+            memClearBtn.image.color = Color.white;
+        }
     }
 
     void Update()
@@ -221,6 +227,18 @@ public class CalculatorManager : MonoBehaviour
             else
             {
                 memRecoverBtn.image.color = Color.green;
+            }
+        }
+
+        if (memClearBtn != null)
+        {
+            if (resultadoMemoria == "0")
+            {
+                memClearBtn.image.color = Color.white;
+            }
+            else
+            {
+                memClearBtn.image.color = Color.green;
             }
         }
     }
