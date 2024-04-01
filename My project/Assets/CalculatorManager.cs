@@ -21,7 +21,7 @@ public class CalculatorManager : MonoBehaviour
 
     private const int MAX_CARACTERES_MOSTRADOS = 10;
 
-    //Al pulsar un número de la calculadorá, se almacena para su futuro calculo y se actualiza la expresión mostrada por pantalla
+    //Al pulsar un número de la calculadora, se almacena para su futuro calculo y se actualiza la expresión mostrada por pantalla
     public void PulsarNumero(string digito)
     {
         //Se diferencia si es el primer dígito o si ya se ha introducido alguno
