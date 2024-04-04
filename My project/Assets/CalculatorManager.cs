@@ -41,13 +41,22 @@ public class CalculatorManager : MonoBehaviour
 
     public void PulsarOperacion(string operacion)
     {
+        if (ExisteSigno())
+        {
+            return;
+        }
         igualPulsado = false;
         puntoEnOperador = false;
 
         //Si en vez de pulsar igual (=), sigues haciendo operaciones, la calculadora te calculará el resultado de esa operación primera
-        if (entradaActual.Any(operadores.Contains))
+        if (entradaActual == "0" && (operacion == "+" || operacion == "-"))
+        {
+            entradaActual = "";
+        }
+        else if (entradaActual.Any(operadores.Contains) && !EscribiendoSigno(operacion))
+        {
             Calcular();
-
+        }
         entradaActual += operacion;
         ActualizarTextoDisplay();
     }
@@ -200,6 +209,24 @@ public class CalculatorManager : MonoBehaviour
             resultadoParseado = resultado.ToString("0.#####", CultureInfo.InvariantCulture);
         }
         return resultadoParseado;
+    }
+
+
+    private bool EscribiendoSigno(string operacion)
+    {
+        return (operacion == "+" || operacion == "-") && 
+            operadores.Contains(entradaActual[entradaActual.Length - 1]) && 
+            (entradaActual.Length < 2 || int.TryParse(entradaActual[entradaActual.Length - 2].ToString(), out _));
+    }
+
+    private bool ExisteSigno()
+    {
+        if (entradaActual.Length < 2) 
+        {
+            return false;
+        }
+        return operadores.Contains(entradaActual[entradaActual.Length - 1]) &&
+            operadores.Contains(entradaActual[entradaActual.Length - 2]);
     }
 
     // El color de los botones MC y MR se atenúa cuando la memoria está a 0
