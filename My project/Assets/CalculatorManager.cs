@@ -41,7 +41,7 @@ public class CalculatorManager : MonoBehaviour
 
     public void PulsarOperacion(string operacion)
     {
-        if (ExisteSigno())
+        if (ExisteSigno() || entradaActual[entradaActual.Length - 1] == '.')
         {
             return;
         }
@@ -214,14 +214,14 @@ public class CalculatorManager : MonoBehaviour
 
     private bool EscribiendoSigno(string operacion)
     {
-        return (operacion == "+" || operacion == "-") && 
-            operadores.Contains(entradaActual[entradaActual.Length - 1]) && 
+        return (operacion == "+" || operacion == "-") &&
+            operadores.Contains(entradaActual[entradaActual.Length - 1]) &&
             (entradaActual.Length < 2 || int.TryParse(entradaActual[entradaActual.Length - 2].ToString(), out _));
     }
 
     private bool ExisteSigno()
     {
-        if (entradaActual.Length < 2) 
+        if (entradaActual.Length < 2)
         {
             return false;
         }
